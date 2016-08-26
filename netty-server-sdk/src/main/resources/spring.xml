@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="sessionManager" class="com.pb.server.session.PBSessionManage"></bean>
+    <bean id="pbIOHandler" class="com.pb.server.handler.PBIoHandler" scope="prototype">
+        <property name="handlers">
+            <map>
+                <entry key="login">
+                    <bean class="com.pb.server.handler.LoginHandler"/>
+                </entry>
+                <entry key="ping">
+                    <bean class="com.pb.server.handler.PingHandler"/>
+                </entry>
+                <entry key="message">
+                    <bean class="com.pb.server.handler.MessageHandler"/>
+                </entry>
+                <entry key="ack">
+                    <bean class="com.pb.server.handler.ACKHandler"/>
+                </entry>
+                <entry key="logout">
+                    <bean class="com.pb.server.handler.LogoutHandler"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+    <bean id="messagePusher" class="com.pb.server.pusher.PBMessagePusher"></bean>
+    <bean id="offlineMessageManager" class="com.pb.server.MessageFactory.OfflineMessageManager"></bean>
+
+</beans>
