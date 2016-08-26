@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/netty-server-cashe/netty-server-cashe.iml" filepath="$PROJECT_DIR$/netty-server-cashe/netty-server-cashe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-server-cache/netty-server-cache.iml" filepath="$PROJECT_DIR$/netty-server-cache/netty-server-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-server-demo.iml" filepath="$PROJECT_DIR$/netty-server-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-server-sdk/netty-server-sdk.iml" filepath="$PROJECT_DIR$/netty-server-sdk/netty-server-sdk.iml" />
     </modules>
